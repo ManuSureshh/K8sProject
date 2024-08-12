@@ -17,3 +17,13 @@
 
 <br>
 
+## Create a secret for DockerHub in order to pull the image from the private repositroy.
+```
+kubectl create secret docker-registry my-dockerhub-secret \
+  --docker-server=https://index.docker.io/v1/ \
+  --docker-username=<your-username> \
+  --docker-password=<your-password> \
+  --docker-email=<your-email>
+```
+
+

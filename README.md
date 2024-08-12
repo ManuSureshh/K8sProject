@@ -43,7 +43,7 @@ kubectl create secret docker-registry my-dockerhub-secret \
 
 ```
 
-![image](https://github.com/user-attachments/assets/c47d445e-4ccb-4949-8024-d36496366fdd)
+![image](https://github.com/user-attachments/assets/792e78a4-0a65-44e0-ae4d-4ba7b87af8c8)
 
 <br>
 

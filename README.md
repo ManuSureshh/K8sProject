@@ -47,5 +47,6 @@ kubectl create secret docker-registry my-dockerhub-secret \
 
 <br>
 
+We can use this secret to Pull the Images from the prvate Docker Hub repository.
 
 

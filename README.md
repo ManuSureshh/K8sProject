@@ -17,13 +17,30 @@
 
 <br>
 
+![image](https://github.com/user-attachments/assets/9a818b2b-86d7-44ef-9c66-62bbd1f9517a)
+
+<br>
+
+## Create a Namespace for your project
+```
+kubectl create namespace 'namespace name'
+```
+
+<br>
+
+![image](https://github.com/user-attachments/assets/0e37d31b-a57b-4b06-a38a-45fb67cfeede)
+
+<br>
+
 ## Create a secret for DockerHub in order to pull the image from the private repositroy.
 ```
 kubectl create secret docker-registry my-dockerhub-secret \
   --docker-server=https://index.docker.io/v1/ \
   --docker-username=<your-username> \
   --docker-password=<your-password> \
-  --docker-email=<your-email>
+  --docker-email=<your-email> \
+  --namespace=my-namespace
+
 ```
 
 

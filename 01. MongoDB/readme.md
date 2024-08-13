@@ -21,3 +21,8 @@ kubectl exec -it mongodb-584d7dc6d5-z747q -n k8s -- /bin/bash
   ```
   exit
   ```
+
+
+<br>
+
+![image](https://github.com/user-attachments/assets/90a5285b-cf61-4586-8ce9-f99a617c32f2)

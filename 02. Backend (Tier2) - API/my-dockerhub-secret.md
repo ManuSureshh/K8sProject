@@ -34,4 +34,5 @@ metadata:
   namespace: k8s
 type: kubernetes.io/dockerconfigjson
 data:
-  .dockerconfigjson: 
+  .dockerconfigjson: eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJzdXJlc2htYW51MTI2QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiQXZheWFAMTIzIiwiZW1haWwiOiJzdXJlc2htYW51MTI2QGdtYWlsLmNvbSIsImF1dGgiOiI8YmFzZTY0LWVuY29kZWQtYXV0aD4ifX19
+```

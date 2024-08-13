@@ -1,7 +1,22 @@
 
+## Use the manifests to deploy the MongoDB onto the K8s cluster
+```
+kubectl apply -f  mongo-secret.yaml
+```
+```
+kubectl apply -f mongo-pvc.yaml
+```
+```
+kubectl apply -f mongo-storageclass.yaml
+```
+```
+kubectl apply -f mongo-deployment.yaml
+```
+```
+kubectl apply -f mongo-service.yaml
+```
 
-
-# Check the MongoDB status
+## Check the MongoDB status
 ```
 kubectl get pods -n k8s
 ```

@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -26,17 +25,17 @@ spec:
       - name: frontend
         image: manusuresh126/frontendapp:latest
         ports:
-        - containerPort: 80  # Adjust this if your app uses a different port
+        - containerPort: 3000
         livenessProbe:
           httpGet:
             path: /health  # Adjust this path if needed
-            port: 80
+            port: 3000
           initialDelaySeconds: 10
           periodSeconds: 10
         readinessProbe:
           httpGet:
             path: /health  # Adjust this path if needed
-            port: 80
+            port: 3000
           initialDelaySeconds: 5
           periodSeconds: 5
           successThreshold: 1

@@ -1,1 +1,44 @@
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: k8s  # Ensure this namespace matches your setup
+  labels:
+    role: frontend
+    env: demo
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      role: frontend
+  template:
+    metadata:
+      labels:
+        role: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: manusuresh126/frontendapp:latest
+        ports:
+        - containerPort: 80  # Adjust this if your app uses a different port
+        livenessProbe:
+          httpGet:
+            path: /health  # Adjust this path if needed
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health  # Adjust this path if needed
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          successThreshold: 1
+      imagePullSecrets:
+      - name: my-dockerhub-secret  # Ensure this Docker registry secret exists
